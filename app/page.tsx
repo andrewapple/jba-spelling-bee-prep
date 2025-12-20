@@ -5,7 +5,194 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { RefreshCw, Play, ArrowRight, Trophy, BookOpen } from "lucide-react"
 
-const SPELLING_WORDS = ["tag", "send", "deck", "stuck", "snug", "fish", "hold", "mind", "stay", "scrub", "draw", "brown", "cozy OR cosy", "tint", "milk", "yawn", "tank", "want", "crowd", "pond", "skirt", "sharks", "quilt", "twigs", "taffy", "comfy", "stretch", "tight", "candy", "scrunch", "ruby", "close", "tackle", "wire", "skater", "giant", "bucket", "chance", "baskets", "tender", "paste", "melon", "farmer", "parent", "tail", "hockey", "slime", "insects", "teeth", "shortcut", "bait", "lure", "cluster", "forest", "hollow", "spinning", "baffling", "sizzling", "hoist", "search", "remind", "mango", "coral", "jangle", "shimmer", "blossoms", "swampy", "studded", "focus", "distress", "lessons", "moment", "ajar", "basil", "triple", "satin", "ahoy", "signal", "answer", "shuffle", "dollop", "minnows", "silver", "before", "circus", "writing", "kitchen", "sugar", "awkward", "seep", "sweet", "wheels", "faint", "fruit", "roam", "goats", "woozy", "limbs", "ahead", "señor", "unicorn", "faraway", "heater", "pirates", "understand", "wooden", "leaning", "breakfast", "window", "acrobat", "message", "chocolate", "forepaw", "elephant", "hedgehog", "recipe", "garbage", "surprise", "mermaid", "bombarded", "disability", "incredible", "leather", "countess", "nervous", "peppercorn", "cartwheel", "raise", "weather", "zooming", "attacked", "turnout", "eaten", "streetlights", "journey", "courtyard", "shouting", "asleep", "curious", "dinosaur", "brilliant", "vacuum", "gorgeous", "monsoon", "dangerous", "avocado", "valentine", "February", "formation", "especially", "hesitate", "scorcher", "scavenger", "fragments", "deflated", "unleash", "ration", "cosmetics", "crawdad", "frustration", "unruly", "mascot", "aroma", "moustache OR mustache", "artifacts OR artefacts", "perfume", "sinister", "tuxedo", "discoveries", "lurches", "language", "prognosis", "Buffalo", "sequins", "gallop", "fabulous", "lanky", "fluently", "mysterious", "brandished", "sardines", "anguish", "conical", "rickety", "lilt", "pediatric", "porridge", "democracy", "rummage", "beige", "ancestral", "grimace", "gaunt", "enormous", "geranium", "nautical", "dubious", "ebony", "foreign", "paltry", "verdict", "garbled", "encourages", "imitation", "miniature", "receptionist", "preamble", "plausible", "reprimanding", "commotion", "oblivion", "immigrants", "steeple", "spectators", "lanyards", "suspicious", "parchment", "ramshackle", "fugitive", "heron", "dissolving", "nomad", "billowed", "skewer", "Berlin", "lunacy", "conjure", "bracken", "noggin", "neon", "rakish", "hypnosis", "rotunda", "gusto", "toiletries", "gleaned", "jeered", "winsome", "prattling", "galore", "emporium", "atrium", "eccentric", "savant", "almanac", "hippies", "samosas", "campaign", "pistachio", "mosque", "zombielike", "warlock", "colossus", "convulsively", "dimensional", "garishly", "graffitist", "Everest", "dexterity", "cavorting", "marauder", "conscience", "battlements", "deferential", "albatross", "khaki", "opalescent", "asphalt", "Yiddish", "talcum", "tranquilizer", "equestrian", "plaited", "monsieur", "manticores", "prestigious", "fraidycat", "guttural", "lo mein", "courier", "sans serif", "psyche", "stucco", "Frankenstein", "schema", "et cetera", "vidimus", "delphine", "slough", "archipelago", "serape OR sarape", "puissance", "pinioning", "chignon", "pheromone", "galleon", "magnanimous", "chartreuse", "wainscoting", "Nehru", "gangly", "swaggering", "chimneys", "riveted", "plaid", "dirge", "zeal", "whittled", "depots", "fiberglass", "salvaged", "fissures", "enthusiastic", "discipline", "unfamiliar", "scurrying", "dignitaries", "pizzeria", "dismissal", "skittish", "careened", "nomination", "opportunist", "dictatorship", "comrades", "sporadic", "promenade", "repugnant", "invincible", "renowned", "parachute", "laborious", "appointment", "foreseeable", "ratify", "scalpel", "reclusive", "compassionate", "bulletin", "alfalfa", "officially", "crematorium", "bayonet", "amicable", "exuberant", "beautician", "equations", "assignment", "ultimatum", "whinnying", "squalor", "memoirs", "cylinders", "ominous", "muffler", "syndrome", "premises", "safari", "lasagna", "substantially", "mercantile", "formidable", "propaganda", "marquee", "proficient", "compunction", "emphatically", "hyperventilated", "ostracism", "onslaught", "ruefully", "misanthrope", "prototype", "cravenly", "mulberry", "hypocritical", "chlorine", "traumatic", "receipts", "solemnly", "begrudge", "contentious", "precocious", "ensemble", "cadre", "lye", "belfry", "lacrosse", "sluice", "cajolery", "vigilance", "residuals", "boutique", "peroxide", "aristocracy", "apocalypse", "tuberculosis", "barricade", "confreres", "anonymously", "unparalleled", "barrette", "chassis", "junket", "quandary", "Erie", "gingham", "silhouette", "auxiliary", "thesaurus", "patriarchs", "chandelier", "dulce", "concierge", "latticework", "hibiscus", "tamale", "maracas", "gyroplane", "burpees", "Adriatic", "piccolo", "au revoir", "tulle", "boll weevil", "camphor", "Tucson", "paparazzi", "pumpernickel", "pogrom", "bursitis", "pâtisserie", "cycads", "sarsaparilla", "maître d'", "cannelloni", "boulangerie", "bronchitis", "Oswego", "diphtheria", "baklava", "corbels", "trebuchets", "Kilimanjaro", "fräulein", "protégé", "hors d'oeuvres", "maquisards", "Aubusson", "Charolais OR Charollais"]
+const SPELLING_WORDS = [
+  "tag",
+  "send",
+  "deck",
+  "stuck",
+  "snug",
+  "fish",
+  "hold",
+  "mind",
+  "stay",
+  "scrub",
+  "draw",
+  "brown",
+  "cozy OR cosy",
+  "tint",
+  "milk",
+  "yawn",
+  "tank",
+  "want",
+  "crowd",
+  "pond",
+  "skirt",
+  "sharks",
+  "quilt",
+  "twigs",
+  "taffy",
+  "comfy",
+  "stretch",
+  "tight",
+  "candy",
+  "scrunch",
+  "ruby",
+  "close",
+  "tackle",
+  "wire",
+  "skater",
+  "giant",
+  "bucket",
+  "chance",
+  "baskets",
+  "tender",
+  "paste",
+  "melon",
+  "farmer",
+  "parent",
+  "tail",
+  "hockey",
+  "slime",
+  "insects",
+  "teeth",
+  "shortcut",
+  "bait",
+  "lure",
+  "cluster",
+  "forest",
+  "hollow",
+  "spinning",
+  "baffling",
+  "sizzling",
+  "hoist",
+  "search",
+  "remind",
+  "mango",
+  "coral",
+  "jangle",
+  "shimmer",
+  "blossoms",
+  "swampy",
+  "studded",
+  "focus",
+  "distress",
+  "lessons",
+  "moment",
+  "ajar",
+  "basil",
+  "triple",
+  "satin",
+  "ahoy",
+  "signal",
+  "answer",
+  "shuffle",
+  "dollop",
+  "minnows",
+  "silver",
+  "before",
+  "circus",
+  "writing",
+  "kitchen",
+  "sugar",
+  "awkward",
+  "seep",
+  "sweet",
+  "wheels",
+  "faint",
+  "fruit",
+  "roam",
+  "goats",
+  "woozy",
+  "limbs",
+  "ahead",
+  "señor",
+  "unicorn",
+  "faraway",
+  "heater",
+  "pirates",
+  "understand",
+  "wooden",
+  "leaning",
+  "breakfast",
+  "window",
+  "acrobat",
+  "message",
+  "chocolate",
+  "forepaw",
+  "elephant",
+  "hedgehog",
+  "recipe",
+  "garbage",
+  "surprise",
+  "mermaid",
+  "bombarded",
+  "disability",
+  "incredible",
+  "leather",
+  "countess",
+  "nervous",
+  "peppercorn",
+  "cartwheel",
+  "raise",
+  "weather",
+  "zooming",
+  "attacked",
+  "turnout",
+  "eaten",
+  "streetlights",
+  "journey",
+  "courtyard",
+  "shouting",
+  "asleep",
+  "curious",
+  "dinosaur",
+  "brilliant",
+  "vacuum",
+  "gorgeous",
+  "monsoon",
+  "dangerous",
+  "avocado",
+  "valentine",
+  "February",
+  "formation",
+  "especially",
+  "hesitate",
+  "scorcher",
+  "scavenger",
+  "fragments",
+  "deflated",
+  "unleash",
+  "ration",
+  "cosmetics",
+  "crawdad",
+  "frustration",
+  "unruly",
+  "mascot",
+  "aroma",
+  "moustache OR mustache",
+  "artifacts OR artefacts",
+  "perfume",
+  "sinister",
+  "tuxedo",
+  "discoveries",
+  "lurches",
+  "language",
+  "prognosis",
+  "Buffalo",
+  "sequins",
+  "gallop",
+  "fabulous",
+  "lanky",
+  "fluently",
+  "mysterious",
+  "brandished",
+  "sardines",
+  "anguish",
+  "conical",
+  "rickety",
+  "lilt",
+  "pediatrics",
+]
 
 export default function SpellingBeePage() {
   const [gameStarted, setGameStarted] = useState(false)
@@ -82,9 +269,14 @@ export default function SpellingBeePage() {
                 ) : (
                   // Initial state
                   <>
-                    <div className="w-20 h-20 rounded-full bg-educational-primary/20 flex items-center justify-center mx-auto">
-                      <Play className="w-10 h-10 text-educational-dark" />
-                    </div>
+                    <Button
+                      onClick={startGame}
+                      size="lg"
+                      className="bg-educational-dark hover:bg-educational-dark/90 text-white px-8 py-6 text-xl font-semibold mb-6"
+                    >
+                      <Play className="w-6 h-6 mr-2" />
+                      Start Practice
+                    </Button>
                     <h2 className="text-3xl font-bold text-educational-dark">{"Ready to Practice?"}</h2>
                     <p className="text-lg text-educational-muted">
                       {`${totalWords} spelling words are ready for practice`}
@@ -96,14 +288,6 @@ export default function SpellingBeePage() {
                     </p>
                   </>
                 )}
-                <Button
-                  onClick={startGame}
-                  size="lg"
-                  className="bg-educational-dark hover:bg-educational-dark/90 text-white px-8 py-6 text-xl font-semibold"
-                >
-                  <Play className="w-6 h-6 mr-2" />
-                  Start Practice
-                </Button>
               </div>
             ) : (
               // Game in progress
@@ -161,8 +345,8 @@ export default function SpellingBeePage() {
                 {/* Instructions */}
                 <div className="bg-educational-secondary/30 rounded-lg p-4 border border-educational-border">
                   <p className="text-sm text-educational-dark leading-relaxed">
-                    <strong>Instructions:</strong> Read the word aloud. Click <strong>Next</strong> if
-                    she spells it correctly, or click <strong>Recycle</strong> to practice it again later.
+                    <strong>Instructions:</strong> Read the word aloud. Click <strong>Next</strong> if she spells it
+                    correctly, or click <strong>Recycle</strong> to practice it again later.
                   </p>
                 </div>
               </div>
