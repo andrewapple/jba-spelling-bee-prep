@@ -61,9 +61,9 @@ export default function SpellingBeePage() {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-3 mb-4">
             <BookOpen className="w-10 h-10 text-educational-dark" />
-            <h1 className="text-4xl md:text-5xl font-bold text-educational-dark text-balance">Spelling Bee Practice</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-educational-dark text-balance">Juliet Spells</h1>
           </div>
-          <p className="text-lg text-educational-muted">{"Help your 5th grader master their spelling words!"}</p>
+          <p className="text-lg text-educational-muted">{"You got this!"}</p>
         </div>
 
         {/* Main Card */}
@@ -91,7 +91,7 @@ export default function SpellingBeePage() {
                     </p>
                     <p className="text-sm text-educational-muted max-w-md mx-auto leading-relaxed">
                       {
-                        "Click Start to begin. Say each word to the student, and use Next for correct answers or Recycle for words that need more practice."
+                        "Click Start to begin. Use NEXT for correct answers or RECYCLE for words that need more practice."
                       }
                     </p>
                   </>
@@ -161,8 +161,8 @@ export default function SpellingBeePage() {
                 {/* Instructions */}
                 <div className="bg-educational-secondary/30 rounded-lg p-4 border border-educational-border">
                   <p className="text-sm text-educational-dark leading-relaxed">
-                    <strong>Instructions:</strong> Read the word aloud to the student. Click <strong>Next</strong> if
-                    they spell it correctly, or click <strong>Recycle</strong> to practice it again later.
+                    <strong>Instructions:</strong> Read the word aloud. Click <strong>Next</strong> if
+                    she spells it correctly, or click <strong>Recycle</strong> to practice it again later.
                   </p>
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function SpellingBeePage() {
         </Card>
 
         {/* Footer */}
-        <p className="text-center text-sm text-educational-dark/70 mt-6">{"Practice makes perfect! Keep going! 📚"}</p>
+        <p className="text-center text-sm text-educational-dark/70 mt-6">{"peepee poopoo haha"}</p>
       </div>
     </div>
   )
