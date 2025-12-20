@@ -162,7 +162,11 @@ export default function SpellingBeePage() {
                   <p className="text-sm font-semibold text-educational-muted uppercase tracking-wide mb-4">
                     Current Word
                   </p>
-                  {currentWord && <p className="text-5xl md:text-6xl font-bold text-educational-dark">{currentWord}</p>}
+                  {currentWord && (
+                    <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-educational-dark break-words">
+                      {currentWord}
+                    </p>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
