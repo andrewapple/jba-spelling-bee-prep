@@ -200,7 +200,7 @@ export default function SpellingBeePage() {
           </div>
         </Card>
 
-        <p className="text-center text-sm text-educational-dark/70 mt-6">{"peepee poopoo haha"}</p>
+        <p className="text-center text-sm text-educational-dark/70 mt-6">{"Made with ❤️ by Juliet's father"}</p>
       </div>
     </div>
   )
