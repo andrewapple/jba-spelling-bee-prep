@@ -1,4 +1,4 @@
-# JBA's Spelling Bee Practice 🧙‍♂️🐝  
+#   🧙‍♂️🐝 JBA's Spelling Bee Practice
 
 My daughter has advanced in her school spelling bee three years in a row. (Go Juju!) 
 
