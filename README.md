@@ -11,6 +11,7 @@ The app is the epitome of user friendly. However, I love explaining things. Humo
 1. Click "view the app" below
 2. Once the page loads, choose "In Order" or "Random"
 > 💡 **IN ORDER** The words will appear in he order they're listed on the official Spelling Bee Word List. They go from **easy** to **hard**.
+> 
 > 💡 **RANDOM** The words will be in random order.
 3. The application will filter through all the words without repeating until each word has been shown at least once.
 4. Once order is chosen, click "Start Practice"
