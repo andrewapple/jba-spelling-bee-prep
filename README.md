@@ -1,5 +1,6 @@
 # Spelling bee app
 
 
-([https://v0-jba-spells.vercel.app/])
+🚀 [See Live App](https://v0-jba-spells.vercel.app/)
+
 
