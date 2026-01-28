@@ -8,7 +8,7 @@ I build a new web app each year to help her practice, and I always add one or tw
 
 The app is the epitome of user friendly. However, I love explaining things. Humor me.
 
-1. Click "view the app" below
+1. Click below to open the application
 2. Once the page loads, choose "In Order" or "Random"
 > 💡 **IN ORDER** - The words will appear in he order they're listed on the official Spelling Bee Word List. They go from **easy** to **hard**.
 > 
