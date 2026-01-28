@@ -23,5 +23,5 @@ The app is the epitome of user friendly. However, I love explaining things. Humo
 
 <!--🚀 [See Live App](https://v0-jba-spells.vercel.app/)-->
 
-➡️ [![View App](https://img.shields.io/badge/view%20the%20app-red)](https://v0-jba-spells.vercel.app/)
+➡️ [![View App](https://img.shields.io/badge/Click-here-blue?style=for-the-badge)](https://v0-jba-spells.vercel.app/)
 
